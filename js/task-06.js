@@ -4,7 +4,11 @@ const validInputLength = inputEl.getAttribute('data-length');
 inputEl.addEventListener('blur', onInputElBlur);
 
 function onInputElBlur(event) {
-    event.currentTarget.value.length >= validInputLength
-        ? inputEl.classList.add('valid')
-        : inputEl.classList.add('invalid');
+    if (event.currentTarget.value.length >= validInputLength) {
+        inputEl.classList.remove('invalid');
+        inputEl.classList.add('valid');
+    } else {
+        inputEl.classList.add('invalid');
+        inputEl.classList.remove('valid');
+    }
 }
