@@ -51,6 +51,10 @@ function createBoxes(amount) {
 
 btnDestroyEl.addEventListener('click', onBtnDestroyElClick);
 function onBtnDestroyElClick() {
+    destroyBoxes();
+}
+
+function destroyBoxes() {
     boxEl.innerHTML = '';
     inputEl.value = '';
     amount = 0;
