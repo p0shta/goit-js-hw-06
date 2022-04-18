@@ -47,6 +47,7 @@ function createBoxes(amount) {
     }
 
     boxEl.insertAdjacentHTML('beforeend', arrayBoxes.join(''));
+    inputEl.value = '';
 }
 
 btnDestroyEl.addEventListener('click', onBtnDestroyElClick);
